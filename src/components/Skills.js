@@ -1,5 +1,10 @@
+import meter1 from "../assets/img/meter1.svg";
+import meter2 from "../assets/img/meter2.svg";
+import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import arrow1 from "../assets/img/arrow1.svg";
+import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
 export const Skills = () => {
@@ -25,12 +30,12 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="skill-bx wow zoomIn">
-              <h2>Languages and Tools</h2>
-              {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p> */}
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <div className="skill-bx wow zoomIn">
+                        <h2>Skills</h2>
+                        {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p> */}
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
                   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40" /> </a>
@@ -88,14 +93,11 @@ export const Skills = () => {
                   <h5>Git</h5>
                 </div>
               </Carousel>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <img className="background-image-left" src={colorSharp} alt="back-img" />
+        <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   )
 }
-
-
-
