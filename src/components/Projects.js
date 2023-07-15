@@ -17,16 +17,19 @@ export const Projects = () => {
       title: "Hostel Management",
       description: "The Hostel Management website provides a user-friendly interface for both hostel administrators and students",
       imgUrl: projImg1,
+      gitLink: "https://github.com/mohd-ravish/Hostel-Management",
     },
     {
       title: "Note Vault",
       description: "The online platform for securely storing and organizing your important notes. Powered by React and backend by a MySQL database",
       imgUrl: projImg2,
+      gitLink: "https://github.com/mohd-ravish/Note-Vault",
     },
     {
       title: "User Hub",
       description: "User Hub, a user management website designed to manage users and their data. Built with React and powered by MongoDB.",
       imgUrl: projImg3,
+      gitLink: "https://github.com/mohd-ravish/User-Hub",
     }
   ];
 
@@ -35,21 +38,24 @@ export const Projects = () => {
       title: "Chat Verse",
       description: "A group chat built with React that allows multiple users to communicate with each other simultaneously.",
       imgUrl: projImg4,
+      gitLink: "https://github.com/mohd-ravish/Chat-Verse",
     },
     {
       title: "Check It",
       description: "Check-It is a powerful and intuitive to-do list app built with React",
       imgUrl: projImg5,
+      gitLink: "https://github.com/mohd-ravish/Check-It",
     },
     {
       title: "Charity",
       description: "Blood Donation website home page using html and css",
       imgUrl: projImg6,
+      gitLink: "https://github.com/mohd-ravish/Blood-Donation",
     }
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>

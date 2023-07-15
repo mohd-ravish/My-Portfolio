@@ -1,56 +1,51 @@
-import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
+  const [details, setDetails] = useState({
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    user_message: ""
+  })
+
+  const inputDetails = (event) => {
+    setDetails(prev => ({ ...prev, [event.target.name]: [event.target.value] }))
   }
 
-  const handleSubmit = async (e) => {
+  const form = useRef();
+
+  const sendData = (e) => {
     e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
+    emailjs.sendForm('service_ule8lq9', 'template_eqlq5ln', form.current, 'P5FUB0tWg6-xdDyJs')
+      .then(setDetails({
+        user_name: "",
+        user_email: "",
+        user_phone: "",
+        user_message: ""
+      }))
+    console.log(details)
+    toast.success("Sent!", {
+      position: toast.POSITION.TOP_CENTER
+    })
   };
 
   return (
     <section className="contact" id="connect">
+      <ToastContainer />
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us"/>
+                <img className={isVisible ? "animate__animated animate__zoomIn" : ""} src={contactImg} alt="Contact Us" />
               }
             </TrackVisibility>
           </Col>
@@ -58,34 +53,28 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2>Get In Touch</h2>
-                <form onSubmit={handleSubmit}>
-                  <Row>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
-                    </Col>
-                    <Col size={12} sm={6} className="px-1">
-                      <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
-                    </Col>
-                    <Col size={12} className="px-1">
-                      <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <button type="submit"><span>{buttonText}</span></button>
-                    </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                  <h2>Get In Touch</h2>
+                  <form ref={form} onSubmit={sendData}>
+                    <Row>
+                      <Col size={12} sm={12} className="px-1">
+                        <input type="text" placeholder="Full Name" name="user_name"  value={details.user_name} onChange={inputDetails} autoComplete="off" required />
                       </Col>
-                    }
-                  </Row>
-                </form>
-              </div>}
+                      {/* <Col size={12} sm={6} className="px-1">
+                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                    </Col> */}
+                      <Col size={12} sm={6} className="px-1">
+                        <input type="email" placeholder="Email Address" name="user_email"  value={details.user_email} onChange={inputDetails} required />
+                      </Col>
+                      <Col size={12} sm={6} className="px-1">
+                        <input type="tel" placeholder="Phone No." name="user_phone"  value={details.user_phone} onChange={inputDetails} autoComplete="off" required />
+                      </Col>
+                      <Col size={12} className="px-1">
+                        <textarea rows="6" placeholder="Message" name="user_message"  value={details.user_message} onChange={inputDetails} required></textarea>
+                        <button type="submit"><span>Send</span></button>
+                      </Col>
+                    </Row>
+                  </form>
+                </div>}
             </TrackVisibility>
           </Col>
         </Row>
