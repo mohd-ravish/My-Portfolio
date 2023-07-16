@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-// import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.png';
 import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
@@ -51,8 +51,8 @@ export const NavBar = () => {
             <span className="navbar-text">
             <div className="social-icon">
                 <a href="https://linkedin.com/in/mohdravish" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
-                {/* <a href="#"><img src={navIcon2} alt="" /></a> */}
-                <a href="https://instagram.com/rrravishh" target="_blank" rel="noreferrer"><img src={navIcon3} alt="" /></a>
+                <a href="https://instagram.com/rrravishh" target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
+                <a href="https://github.com/mohd-ravish" target="_blank" rel="noreferrer"><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 // import { MailchimpForm } from "./MailchimpForm";
 import logo from "../assets/img/logo.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-// import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.png';
 
 export const Footer = () => {
   var date = new Date();
@@ -19,9 +19,9 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={4} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://linkedin.com/in/mohdravish" target="_blank"  rel="noreferrer"><img src={navIcon1} alt="linkedin" /></a>
-              {/* <a href="#"><img src={navIcon2} alt="" /></a> */}
-              <a href="https://instagram.com/rrravishh" target="_blank"  rel="noreferrer"><img src={navIcon3} alt="instagram" /></a>
+              <a href="https://linkedin.com/in/mohdravish" target="_blank" rel="noreferrer"><img src={navIcon1} alt="" /></a>
+              <a href="https://instagram.com/rrravishh" target="_blank" rel="noreferrer"><img src={navIcon2} alt="" /></a>
+              <a href="https://github.com/mohd-ravish" target="_blank" rel="noreferrer"><img src={navIcon3} alt="" /></a>
             </div>
             <p>Copyright ⓒ {date.getFullYear()}. All Rights Reserved</p>
           </Col>
