@@ -41,16 +41,16 @@ export const Projects = () => {
       gitLink: "https://github.com/mohd-ravish/Chat-Verse",
     },
     {
-      title: "Check It",
-      description: "Check-It is a powerful and intuitive to-do list app built with React",
+      title: "Notes Taking App",
+      description: "A Notes Taking web application developed using React. It allows users to create, store, and manage their notes directly within their browser's local database, ensuring data privacy and easy access.",
       imgUrl: projImg5,
-      gitLink: "https://github.com/mohd-ravish/Check-It",
+      gitLink: "https://notes-taking-app-ecru.vercel.app/",
     },
     {
-      title: "Charity",
-      description: "Blood Donation website home page using html and css",
+      title: "Check It",
+      description: "Check-It is a powerful and intuitive to-do list app built with React",
       imgUrl: projImg6,
-      gitLink: "https://github.com/mohd-ravish/Blood-Donation",
+      gitLink: "https://github.com/mohd-ravish/Check-It",
     }
   ];
 
