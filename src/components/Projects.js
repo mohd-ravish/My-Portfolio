@@ -50,7 +50,7 @@ export const Projects = () => {
       title: "Check It",
       description: "Check-It is a powerful and intuitive to-do list app built with React",
       imgUrl: projImg6,
-      gitLink: "https://github.com/mohd-ravish/Check-It",
+      gitLink: "https://check-it-eight.vercel.app/",
     }
   ];
 
