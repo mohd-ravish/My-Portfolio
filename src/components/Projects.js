@@ -29,7 +29,7 @@ export const Projects = () => {
       title: "User Hub",
       description: "User Hub, a user management website designed to manage users and their data. Built with React and powered by MongoDB.",
       imgUrl: projImg3,
-      gitLink: "https://github.com/mohd-ravish/User-Hub",
+      gitLink: "https://user-hub-react.vercel.app/",
     }
   ];
 
