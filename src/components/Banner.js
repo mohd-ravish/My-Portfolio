@@ -56,7 +56,7 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hii! I'm Mohd Ravish`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Web Designer", "MERN Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hii!! I'm Mohd Ravish`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Web Designer", "MERN Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p> I am a 3rd year Computer Engineering student at Jamia Millia Islamia, specializing in full stack development and exploring the fascinating field of Machine Learning. I am deeply Passionate about building innovative web applications and my expertise lies in the MERN stack.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
