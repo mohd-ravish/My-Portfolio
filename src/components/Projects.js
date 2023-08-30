@@ -38,7 +38,7 @@ export const Projects = () => {
       title: "Chat Verse",
       description: "A group chat built with React that allows multiple users to communicate with each other simultaneously.",
       imgUrl: projImg4,
-      gitLink: "https://github.com/mohd-ravish/Chat-Verse",
+      gitLink: "https://chat-verse-mr.vercel.app/",
     },
     {
       title: "Notes Taking App",
