@@ -19,6 +19,13 @@ const Hero = () => {
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Get In Touch</a>
             <a 
+              href="https://drive.google.com/uc?export=download&id=1-8uJvXnT21ivMSIvM2cm6vr8D_58k-Rn" 
+              className="btn btn-secondary"
+              download
+            >
+              Download Resume
+            </a>
+            <a 
               href="https://github.com/mohd-ravish" 
               target="_blank" 
               rel="noopener noreferrer" 
