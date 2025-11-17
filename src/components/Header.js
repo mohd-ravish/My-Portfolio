@@ -41,6 +41,7 @@ const Header = () => {
           <button onClick={() => scrollToSection('hero')}>Home</button>
           <button onClick={() => scrollToSection('education')}>Education</button>
           <button onClick={() => scrollToSection('skills')}>Skills</button>
+          <button onClick={() => scrollToSection('coding-profiles')}>Coding Profile</button>
           <button onClick={() => scrollToSection('experience')}>Experience</button>
           <button onClick={() => scrollToSection('projects')}>Projects</button>
           <button onClick={() => scrollToSection('publications')}>Publications</button>

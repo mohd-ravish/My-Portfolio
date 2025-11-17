@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Education from './components/Education';
 import Skills from './components/Skills';
+import CodingProfiles from './components/CodingProfiles';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Responsibilities from './components/Responsibilities';
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <Education />
         <Skills />
+        <CodingProfiles />
         <Experience />
         <Projects />
         <Responsibilities />
