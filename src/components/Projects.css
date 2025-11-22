@@ -51,6 +51,12 @@
   flex: 1;
 }
 
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.live-link,
 .source-link {
   color: #3b82f6;
   transition: all 0.3s ease;
@@ -63,6 +69,7 @@
   background: rgba(59, 130, 246, 0.1);
 }
 
+.live-link:hover,
 .source-link:hover {
   color: #8b5cf6;
   background: rgba(59, 130, 246, 0.2);
